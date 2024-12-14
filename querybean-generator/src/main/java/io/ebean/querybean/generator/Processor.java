@@ -61,6 +61,7 @@ public class Processor extends AbstractProcessor implements Constants {
     }
     if (roundEnv.processingOver()) {
       writeModuleInfoBean();
+      ProcessingContext.validateModule();
       ProcessingContext.clear();
     }
     return true;
